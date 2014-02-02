@@ -1,0 +1,31 @@
+
+#carousel div {
+    display: none;
+}
+
+html, body, #carousel div {
+    height:100%;
+    overflow: hidden;
+}
+
+#carousel div {
+    width:100%;
+}
+
+#carousel > div > div > img {
+    width:100%;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    margin:auto;
+}
+
+#carousel div.controls {
+    display: block;
+    z-index: 1;
+    width:300px;
+    height:200px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-100px 0 0 -150px;
+}
