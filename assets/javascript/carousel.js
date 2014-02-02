@@ -4,7 +4,7 @@
         this.element = element;
         this.content = content;
         this.albums  = [];
-        this.addControls();
+        this.addDropDown(this.element);
         this.build();
         this.albums[0].show();
     }
@@ -53,14 +53,6 @@
         var album = this.currentAlbum();
         var left  = new app.Button(parent, 'Left',  function() { carousel.currentAlbum().changeImage(-1); });
         var right = new app.Button(parent, 'Right', function() { carousel.currentAlbum().changeImage( 1); });
-    }
-
-    app.Carousel.prototype.addControls = function (delay) {
-        var controls = document.createElement("div");
-        controls.className ="controls";
-        this.element.appendChild(controls);
-        this.addDropDown(controls);
-        this.addButtons (controls);
     }
 
     app.Carousel.prototype.setTimer = function (delay) {
